@@ -9,7 +9,7 @@
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://hemildesai0910.github.io/TodoReactAppCICD",  // Corrected this line
+  "homepage": "https://hemildesai0910.github.io/TodoReactAppCICD",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
