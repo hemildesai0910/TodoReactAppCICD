@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted # Use self-hosted runner
+    runs-on: self-hosted # Use self-hosted runner (Windows machine)
 
     steps:
       - name: Checkout repository
@@ -29,5 +29,8 @@ jobs:
 
       - name: Deploy to Local Server
         run: |
+          # Ensure the destination directory exists, if not, create it
+          if not exist "D:\ReactApp\" mkdir "D:\ReactApp\"
+          
           # Copy the build files to your server's root directory
           xcopy /E /I /Y build\* "D:\ReactApp\"

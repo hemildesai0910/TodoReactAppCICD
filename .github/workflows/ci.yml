@@ -1,0 +1,47 @@
+name: React App CI
+
+on:
+  push:
+    branches:
+      - main  # Runs the workflow on any push to the main branch
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # 2. Set up Node.js for the environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # 3. Install dependencies (npm install)
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./  # Modify if your frontend is inside a subfolder
+
+      # 4. Run tests (npm test)
+      - name: Run tests
+        run: npm test
+        working-directory: ./
+
+      # 5. Build the React app
+      - name: Build the app
+        run: npm run build
+        working-directory: ./
+
+      # 6. Deploy to a server or hosting provider (optional)
+      # Example: Using GitHub Pages (for frontend only)
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
