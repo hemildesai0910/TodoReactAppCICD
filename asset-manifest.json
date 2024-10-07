@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/TodoReactAppCICD/static/js/main.b003c019.js",
-    "index.html": "/TodoReactAppCICD/index.html",
-    "main.b003c019.js.map": "/TodoReactAppCICD/static/js/main.b003c019.js.map"
+    "main.js": "/hemildesai0910/React-Todo-List-App.git/static/js/main.b003c019.js",
+    "index.html": "/hemildesai0910/React-Todo-List-App.git/index.html",
+    "main.b003c019.js.map": "/hemildesai0910/React-Todo-List-App.git/static/js/main.b003c019.js.map"
   },
   "entrypoints": [
     "static/js/main.b003c019.js"
